@@ -1,0 +1,44 @@
+{
+  "error": {
+    "dataLoading": "Error during server connection"
+  },
+  "common": {
+    "save": "Save",
+    "dataSaved": "BankAccount successfully saved",
+    "dataDeleted": "BankAccount successfully deleted",
+    "notAuthenticated": "User is not authenticated.",
+    "selectFile": "Upload new file",
+    "selectImageFile": "Upload new image",
+    "download": "Download",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "validation": {
+    "required": "{{field}} is required"
+  },
+  "entities": {
+    "bankAccount": {
+      "deleteDialog": {
+        "title": "Delete bankAccount",
+        "description": "Are you sure?"
+      },
+      "notFound": "BankAccount not found",
+      "deleted": "BankAccount deleted",
+      "id": "ID",
+      "name": "entities.bankAccount.name",
+      "bankNumber": "entities.bankAccount.bankNumber",
+      "agencyNumber": "entities.bankAccount.agencyNumber",
+      "lastOperationDuration": "entities.bankAccount.lastOperationDuration",
+      "meanOperationDuration": "entities.bankAccount.meanOperationDuration",
+      "balance": "entities.bankAccount.balance",
+      "openingDay": "entities.bankAccount.openingDay",
+      "lastOperationDate": "entities.bankAccount.lastOperationDate",
+      "active": "entities.bankAccount.active",
+      "accountType": "entities.bankAccount.accountType",
+      "attachment": "entities.bankAccount.attachment",
+      "description": "entities.bankAccount.description"
+    }
+  }
+}

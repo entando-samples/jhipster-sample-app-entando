@@ -1,0 +1,11 @@
+id;name;bank_number;agency_number;last_operation_duration;mean_operation_duration;balance;opening_day;last_operation_date;active;account_type;attachment;attachment_content_type;description
+1;monitor;47917;17676;4944;85342;56;2020-08-04;2020-08-04T07:00:21;false;LOAN;../fake-data/blob/hipster.png;image/png;../fake-data/blob/hipster.txt
+2;Steel bypass;38227;22265;5554;29169;61296;2020-08-04;2020-08-04T05:38:27;false;CHECKING;../fake-data/blob/hipster.png;image/png;../fake-data/blob/hipster.txt
+3;Planner Savings Account;4492;23597;37315;35179;58341;2020-08-04;2020-08-04T15:25:16;false;LOAN;../fake-data/blob/hipster.png;image/png;../fake-data/blob/hipster.txt
+4;distributed North Korean Won Lebanese Pound;78428;49426;16567;64012;50180;2020-08-04;2020-08-04T08:39:46;true;SAVINGS;../fake-data/blob/hipster.png;image/png;../fake-data/blob/hipster.txt
+5;Fresh;4327;21080;3173;20551;34696;2020-08-03;2020-08-04T06:54:36;false;SAVINGS;../fake-data/blob/hipster.png;image/png;../fake-data/blob/hipster.txt
+6;Malaysia;60774;94980;800;57751;93593;2020-08-04;2020-08-04T12:54:58;false;SAVINGS;../fake-data/blob/hipster.png;image/png;../fake-data/blob/hipster.txt
+7;paradigms feed;93839;4905;17093;46969;29667;2020-08-03;2020-08-04T00:45:08;true;SAVINGS;../fake-data/blob/hipster.png;image/png;../fake-data/blob/hipster.txt
+8;Usability Generic;2787;94272;47143;87380;37246;2020-08-03;2020-08-03T18:11:23;false;LOAN;../fake-data/blob/hipster.png;image/png;../fake-data/blob/hipster.txt
+9;navigate;46867;78035;40962;59377;63670;2020-08-04;2020-08-04T15:54:18;true;LOAN;../fake-data/blob/hipster.png;image/png;../fake-data/blob/hipster.txt
+10;communities Industrial functionalities;55168;18898;31612;74611;11956;2020-08-04;2020-08-04T10:44:43;true;SAVINGS;../fake-data/blob/hipster.png;image/png;../fake-data/blob/hipster.txt

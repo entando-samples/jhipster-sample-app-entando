@@ -1,0 +1,59 @@
+{
+  "error": {
+    "dataLoading": "Error during server connection"
+  },
+  "common": {
+    "couldNotFetchData": "Unfortunately we could not fetch entity data",
+    "notAuthenticated": "User is not authenticated.",
+    "loadingMore": "Loading more...",
+    "download": "Download file",
+    "dataDeleted": "BankAccount successfully deleted",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "pagination": {
+    "ariaLabels": {
+      "firstPage": "first page",
+      "previousPage": "previous page",
+      "nextPage": "next page",
+      "lastPage": "last page"
+    }
+  },
+  "filters": {
+    "field": "Field",
+    "value": "Value",
+    "addFilter": "Add filter",
+    "clearFilters": "Clear filters",
+    "filter": "Filter",
+    "operator": "Operator",
+    "operators": {
+      "equals": "equals",
+      "in": "in",
+      "specified": "specified",
+      "unspecified": "unspecified",
+      "contains": "contains"
+    }
+  },
+  "entities": {
+    "bankAccount": {
+      "deleteDialog": {
+        "title": "Delete bankAccount",
+        "description": "Are you sure?"
+      },
+      "noItems": "No bankAccounts available",
+      "id": "ID",
+      "name": "entities.bankAccount.name",
+      "bankNumber": "entities.bankAccount.bankNumber",
+      "agencyNumber": "entities.bankAccount.agencyNumber",
+      "lastOperationDuration": "entities.bankAccount.lastOperationDuration",
+      "meanOperationDuration": "entities.bankAccount.meanOperationDuration",
+      "balance": "entities.bankAccount.balance",
+      "openingDay": "entities.bankAccount.openingDay",
+      "lastOperationDate": "entities.bankAccount.lastOperationDate",
+      "active": "entities.bankAccount.active",
+      "accountType": "entities.bankAccount.accountType",
+      "attachment": "entities.bankAccount.attachment",
+      "description": "entities.bankAccount.description"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "error": {
+    "dataLoading": "Error during server connection"
+  },
+  "common": {
+    "save": "Save",
+    "dataSaved": "Label successfully saved",
+    "dataDeleted": "Label successfully deleted",
+    "notAuthenticated": "User is not authenticated.",
+    "selectFile": "Upload new file",
+    "selectImageFile": "Upload new image",
+    "download": "Download",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "validation": {
+    "required": "{{field}} is required"
+  },
+  "entities": {
+    "label": {
+      "deleteDialog": {
+        "title": "Delete label",
+        "description": "Are you sure?"
+      },
+      "notFound": "Label not found",
+      "deleted": "Label deleted",
+      "id": "ID",
+      "labelName": "entities.label.labelName"
+    }
+  }
+}

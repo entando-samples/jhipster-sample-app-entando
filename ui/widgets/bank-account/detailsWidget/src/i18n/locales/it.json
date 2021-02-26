@@ -1,0 +1,27 @@
+{
+  "common": {
+    "couldNotFetchData": "Non è stato possibile caricare i dati dell'entità",
+    "widgetName": "Dettagli a proposito di '{{widgetNamePlaceholder}}'",
+    "name": "Nome",
+    "value": "Valore",
+    "loading": "Caricamento in corso...",
+    "notAuthenticated": "L'utente non è autenticato."
+  },
+  "entities": {
+    "bankAccount": {
+      "id": "ID",
+      "name": "entità.bankAccount.name",
+      "bankNumber": "entità.bankAccount.bankNumber",
+      "agencyNumber": "entità.bankAccount.agencyNumber",
+      "lastOperationDuration": "entità.bankAccount.lastOperationDuration",
+      "meanOperationDuration": "entità.bankAccount.meanOperationDuration",
+      "balance": "entità.bankAccount.balance",
+      "openingDay": "entità.bankAccount.openingDay",
+      "lastOperationDate": "entità.bankAccount.lastOperationDate",
+      "active": "entità.bankAccount.active",
+      "accountType": "entità.bankAccount.accountType",
+      "attachment": "entità.bankAccount.attachment",
+      "description": "entità.bankAccount.description"
+    }
+  }
+}

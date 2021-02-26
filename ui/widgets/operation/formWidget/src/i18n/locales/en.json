@@ -1,0 +1,35 @@
+{
+  "error": {
+    "dataLoading": "Error during server connection"
+  },
+  "common": {
+    "save": "Save",
+    "dataSaved": "Operation successfully saved",
+    "dataDeleted": "Operation successfully deleted",
+    "notAuthenticated": "User is not authenticated.",
+    "selectFile": "Upload new file",
+    "selectImageFile": "Upload new image",
+    "download": "Download",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "validation": {
+    "required": "{{field}} is required"
+  },
+  "entities": {
+    "operation": {
+      "deleteDialog": {
+        "title": "Delete operation",
+        "description": "Are you sure?"
+      },
+      "notFound": "Operation not found",
+      "deleted": "Operation deleted",
+      "id": "ID",
+      "date": "entities.operation.date",
+      "description": "entities.operation.description",
+      "amount": "entities.operation.amount"
+    }
+  }
+}

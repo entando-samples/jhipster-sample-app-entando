@@ -1,0 +1,27 @@
+{
+  "common": {
+    "couldNotFetchData": "Unfortunately we could not fetch entity data",
+    "widgetName": "Details about '{{widgetNamePlaceholder}}'",
+    "name": "Name",
+    "value": "Value",
+    "loading": "Loading...",
+    "notAuthenticated": "User is not authenticated."
+  },
+  "entities": {
+    "bankAccount": {
+      "id": "ID",
+      "name": "entities.bankAccount.name",
+      "bankNumber": "entities.bankAccount.bankNumber",
+      "agencyNumber": "entities.bankAccount.agencyNumber",
+      "lastOperationDuration": "entities.bankAccount.lastOperationDuration",
+      "meanOperationDuration": "entities.bankAccount.meanOperationDuration",
+      "balance": "entities.bankAccount.balance",
+      "openingDay": "entities.bankAccount.openingDay",
+      "lastOperationDate": "entities.bankAccount.lastOperationDate",
+      "active": "entities.bankAccount.active",
+      "accountType": "entities.bankAccount.accountType",
+      "attachment": "entities.bankAccount.attachment",
+      "description": "entities.bankAccount.description"
+    }
+  }
+}

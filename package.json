@@ -1,0 +1,28 @@
+{
+  "name": "sample",
+  "version": "0.0.0",
+  "description": "Description for sample",
+  "private": true,
+  "license": "UNLICENSED",
+  "cacheDirectories": [
+    "node_modules"
+  ],
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "1.0.13-4.3.1",
+    "generator-jhipster-entando": "6.3.0",
+    "generator-jhipster": "6.10.5",
+    "husky": "4.2.5",
+    "lint-staged": "8.2.1",
+    "prettier": "2.0.5"
+  },
+  "engines": {
+    "node": ">=12.16.1"
+  },
+  "scripts": {
+    "populate-bundle": "bash ./buildBundle.sh",
+    "build-all": "bash ./buildBundle.sh -d",
+    "keycloak": "docker-compose -f src/main/docker/keycloak.yml up",
+    "prettier:format": "prettier --write \"{,src/**/}*.{md,json,yml}\"",
+    "prettier": "prettier --write \"ui/**/*.js\""
+  }
+}

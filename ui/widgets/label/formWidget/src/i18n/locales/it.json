@@ -1,0 +1,33 @@
+{
+  "error": {
+    "dataLoading": "Errore durante la connessione al server"
+  },
+  "common": {
+    "save": "Salva",
+    "dataSaved": "Label salvato/a con successo",
+    "dataDeleted": "Label eliminato/a con successo",
+    "notAuthenticated": "L'utente non è autenticato.",
+    "selectFile": "Carica nuovo file",
+    "selectImageFile": "Carica nuova immagine",
+    "download": "Scarica",
+    "cancel": "Annulla",
+    "delete": "Elimina",
+    "yes": "Si",
+    "no": "No"
+  },
+  "validation": {
+    "required": "{{field}} è obbligatorio"
+  },
+  "entities": {
+    "label": {
+      "deleteDialog": {
+        "title": "Elimina label",
+        "description": "Sei sicuro/a?"
+      },
+      "notFound": "Label non trovato/a",
+      "deleted": "Label eliminato/a",
+      "id": "ID",
+      "labelName": "entità.label.labelName"
+    }
+  }
+}

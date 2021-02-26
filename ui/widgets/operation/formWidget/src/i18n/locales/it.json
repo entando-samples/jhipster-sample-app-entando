@@ -1,0 +1,35 @@
+{
+  "error": {
+    "dataLoading": "Errore durante la connessione al server"
+  },
+  "common": {
+    "save": "Salva",
+    "dataSaved": "Operation salvato/a con successo",
+    "dataDeleted": "Operation eliminato/a con successo",
+    "notAuthenticated": "L'utente non è autenticato.",
+    "selectFile": "Carica nuovo file",
+    "selectImageFile": "Carica nuova immagine",
+    "download": "Scarica",
+    "cancel": "Annulla",
+    "delete": "Elimina",
+    "yes": "Si",
+    "no": "No"
+  },
+  "validation": {
+    "required": "{{field}} è obbligatorio"
+  },
+  "entities": {
+    "operation": {
+      "deleteDialog": {
+        "title": "Elimina operation",
+        "description": "Sei sicuro/a?"
+      },
+      "notFound": "Operation non trovato/a",
+      "deleted": "Operation eliminato/a",
+      "id": "ID",
+      "date": "entità.operation.date",
+      "description": "entità.operation.description",
+      "amount": "entità.operation.amount"
+    }
+  }
+}
