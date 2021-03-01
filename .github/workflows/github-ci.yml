@@ -26,7 +26,7 @@ jobs:
                   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
               run: |
                   if [ -n $SONAR_TOKEN ]; then
-                      ./mvnw -ntp initialize sonar:sonar -Dsonar.organization=entando -Dsonar.host.url=https://sonarcloud.io
+                      ./mvnw -ntp initialize sonar:sonar -Dsonar.organization=entando-samples -Dsonar.host.url=https://sonarcloud.io
                   else
                       echo No SONAR_TOKEN, skipping...
                   fi
