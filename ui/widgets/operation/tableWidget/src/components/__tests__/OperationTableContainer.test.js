@@ -10,8 +10,8 @@ import OperationTableContainer from 'components/OperationTableContainer';
 jest.mock('api/operations');
 
 jest.mock('auth/withKeycloak', () => {
-  const withKeycloak = Component => {
-    return props => (
+  const withKeycloak = (Component) => {
+    return (props) => (
       <Component
         {...props} // eslint-disable-line react/jsx-props-no-spreading
         keycloak={{
@@ -26,8 +26,8 @@ jest.mock('auth/withKeycloak', () => {
 });
 
 jest.mock('components/pagination/withPagination', () => {
-  const withPagination = Component => {
-    return props => (
+  const withPagination = (Component) => {
+    return (props) => (
       <Component
         {...props} // eslint-disable-line react/jsx-props-no-spreading
         pagination={{

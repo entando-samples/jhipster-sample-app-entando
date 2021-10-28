@@ -127,7 +127,7 @@ class LabelTableElement extends HTMLElement {
   }
 
   defaultWidgetEventHandler() {
-    return evt => {
+    return (evt) => {
       const action = widgetEventToFSA(evt);
       this.reactRootRef.current.dispatch(action);
     };

@@ -10,7 +10,7 @@ jest.mock('api/labels');
 jest.mock('@material-ui/pickers', () => {
   // eslint-disable-next-line react/prop-types
   const MockPicker = ({ id, value, name, label, onChange }) => {
-    const handleChange = event => onChange(event.currentTarget.value);
+    const handleChange = (event) => onChange(event.currentTarget.value);
     return (
       <span>
         <label htmlFor={id}>{label}</label>
@@ -26,8 +26,8 @@ jest.mock('@material-ui/pickers', () => {
 });
 
 jest.mock('auth/withKeycloak', () => {
-  const withKeycloak = Component => {
-    return props => (
+  const withKeycloak = (Component) => {
+    return (props) => (
       <Component
         {...props} // eslint-disable-line react/jsx-props-no-spreading
         keycloak={{
@@ -53,7 +53,7 @@ describe('LabelAddFormContainer', () => {
   const onCreateMock = jest.fn();
 
   it('saves data', async () => {
-    apiLabelPost.mockImplementation(data => Promise.resolve(data));
+    apiLabelPost.mockImplementation((data) => Promise.resolve(data));
 
     const { findByTestId, findByLabelText, queryByText, rerender } = render(
       <LabelAddFormContainer onError={onErrorMock} onUpdate={onCreateMock} />

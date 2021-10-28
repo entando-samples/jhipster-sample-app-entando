@@ -19,7 +19,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
 import ConfirmationDialogTrigger from 'components/common/ConfirmationDialogTrigger';
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     margin: theme.spacing(3),
   },
@@ -75,19 +75,19 @@ class BankAccountForm extends PureComponent {
       i18n,
     } = this.props;
 
-    const handleDateChange = field => value => {
+    const handleDateChange = (field) => (value) => {
       setFieldValue(field, value);
     };
 
-    const dateTimeLabelFn = date => (date ? new Date(date).toLocaleString(i18n.language) : '');
-    const dateLabelFn = date => (date ? new Date(date).toLocaleDateString(i18n.language) : '');
-    const getHelperText = field => (errors[field] && touched[field] ? errors[field] : '');
+    const dateTimeLabelFn = (date) => (date ? new Date(date).toLocaleString(i18n.language) : '');
+    const dateLabelFn = (date) => (date ? new Date(date).toLocaleDateString(i18n.language) : '');
+    const getHelperText = (field) => (errors[field] && touched[field] ? errors[field] : '');
     const getFormattedTime = () => {
       const today = new Date();
       return `${today.getFullYear()}${today.getMonth() + 1}${today.getDate()}`;
     };
 
-    const handleFiles = field => event => {
+    const handleFiles = (field) => (event) => {
       const uploadedFile = event.target;
       const reader = new FileReader();
       reader.onload = () => {
@@ -101,7 +101,7 @@ class BankAccountForm extends PureComponent {
       reader.readAsDataURL(uploadedFile.files[0]);
     };
 
-    const handleSubmit = e => {
+    const handleSubmit = (e) => {
       e.stopPropagation(); // avoids double submission caused by react-shadow-dom-retarget-events
       formikHandleSubmit(e);
     };
@@ -237,7 +237,9 @@ class BankAccountForm extends PureComponent {
               />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <InputLabel htmlFor="bankAccount-accountType">{t('entities.bankAccount.accountType')}</InputLabel>
+              <InputLabel htmlFor="bankAccount-accountType">
+                {t('entities.bankAccount.accountType')}
+              </InputLabel>
               <Select
                 native
                 id="bankAccount-accountType"

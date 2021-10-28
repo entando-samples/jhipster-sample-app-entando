@@ -75,7 +75,7 @@ export const reducer = (state = initialState, action) => {
       return { ...state, items: [...state.items, action.payload] };
     case UPDATE:
     case INPUT_EVENT_TYPES.formUpdate: {
-      const i = state.items.findIndex(item => {
+      const i = state.items.findIndex((item) => {
         return item.id === action.payload.id;
       });
       const items = [...state.items];
@@ -84,7 +84,7 @@ export const reducer = (state = initialState, action) => {
     }
     case DELETE:
     case INPUT_EVENT_TYPES.formDelete:
-      return { ...state, items: state.items.filter(item => item.id !== action.payload.id) };
+      return { ...state, items: state.items.filter((item) => item.id !== action.payload.id) };
     default:
       return state;
   }

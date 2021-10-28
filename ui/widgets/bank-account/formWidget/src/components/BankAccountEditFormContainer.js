@@ -62,7 +62,7 @@ class BankAccountEditFormContainer extends PureComponent {
 
   closeNotification() {
     this.setState(() => ({
-      notificationMessage: null
+      notificationMessage: null,
     }));
   }
 
@@ -120,9 +120,9 @@ class BankAccountEditFormContainer extends PureComponent {
 
     let form;
     if (typeof bankAccount === 'undefined') {
-     form = t('entities.bankAccount.notFound');
+      form = t('entities.bankAccount.notFound');
     } else if (bankAccount === null) {
-      form = t('entities.bankAccount.deleted');;
+      form = t('entities.bankAccount.deleted');
     } else {
       form = (
         <BankAccountForm
@@ -138,9 +138,7 @@ class BankAccountEditFormContainer extends PureComponent {
         <UnauthenticatedView keycloak={keycloak}>
           {t('common.notAuthenticated')}
         </UnauthenticatedView>
-        <AuthenticatedView keycloak={keycloak}>
-         {form}
-        </AuthenticatedView>
+        <AuthenticatedView keycloak={keycloak}>{form}</AuthenticatedView>
         <Notification
           status={notificationStatus}
           message={notificationMessage}

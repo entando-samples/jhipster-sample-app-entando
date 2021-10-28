@@ -10,8 +10,8 @@ import LabelDetailsContainer from 'components/LabelDetailsContainer';
 jest.mock('api/label');
 
 jest.mock('auth/withKeycloak', () => {
-  const withKeycloak = Component => {
-    return props => (
+  const withKeycloak = (Component) => {
+    return (props) => (
       <Component
         {...props} // eslint-disable-line react/jsx-props-no-spreading
         keycloak={{
@@ -60,7 +60,7 @@ describe('LabelDetailsContainer component', () => {
     await wait(() => {
       expect(apiLabelGet).toHaveBeenCalledTimes(1);
       expect(onErrorMock).toHaveBeenCalledTimes(1);
-      expect(getByText('common.couldNotFetchData')).toBeInTheDocument();
+      expect(getByText('error.dataLoading')).toBeInTheDocument();
     });
   });
 });

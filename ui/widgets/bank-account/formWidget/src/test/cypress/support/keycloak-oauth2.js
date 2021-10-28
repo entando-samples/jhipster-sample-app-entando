@@ -29,17 +29,16 @@ Cypress.Commands.add('keycloackLogin', (oauth2Data, user) => {
         redirect_uri: Cypress.config('baseUrl'),
         client_id: oauth2Data.clientId,
       },
-    })
-      .then(() => {
-        cy.visit(Cypress.config('baseUrl'));
-        cy.get('#username').type(userData.username);
-        cy.get('#password').type(userData.password);
-        cy.get('.LoginPage__button').click();
-      });
+    }).then(() => {
+      cy.visit(Cypress.config('baseUrl'));
+      cy.get('#username').type(userData.username);
+      cy.get('#password').type(userData.password);
+      cy.get('.LoginPage__button').click();
+    });
   });
 });
 
-Cypress.Commands.add('keycloackLogout', oauth2Data => {
+Cypress.Commands.add('keycloackLogout', (oauth2Data) => {
   return cy.request({
     url: `${oauth2Data.realmPath}/protocol/openid-connect/logout`,
   });
@@ -48,7 +47,7 @@ Cypress.Commands.add('keycloackLogout', oauth2Data => {
 Cypress.Commands.add('clearCache', () => {
   cy.clearCookies();
   cy.clearLocalStorage();
-  cy.window().then(win => {
+  cy.window().then((win) => {
     win.sessionStorage.clear();
   });
 });

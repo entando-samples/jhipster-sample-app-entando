@@ -80,7 +80,10 @@ const BankAccountFieldTable = ({ t, i18n: { language }, bankAccount }) => (
           <span>{t('entities.bankAccount.openingDay')}</span>
         </TableCell>
         <TableCell>
-          <span>{bankAccount.openingDay && new Date(bankAccount.openingDay).toLocaleDateString(language)}</span>
+          <span>
+            {bankAccount.openingDay &&
+              new Date(bankAccount.openingDay).toLocaleDateString(language)}
+          </span>
         </TableCell>
       </TableRow>
       <TableRow>
@@ -88,7 +91,10 @@ const BankAccountFieldTable = ({ t, i18n: { language }, bankAccount }) => (
           <span>{t('entities.bankAccount.lastOperationDate')}</span>
         </TableCell>
         <TableCell>
-          <span>{bankAccount.lastOperationDate && new Date(bankAccount.lastOperationDate).toLocaleString(language)}</span>
+          <span>
+            {bankAccount.lastOperationDate &&
+              new Date(bankAccount.lastOperationDate).toLocaleString(language)}
+          </span>
         </TableCell>
       </TableRow>
       <TableRow>
@@ -96,7 +102,9 @@ const BankAccountFieldTable = ({ t, i18n: { language }, bankAccount }) => (
           <span>{t('entities.bankAccount.active')}</span>
         </TableCell>
         <TableCell>
-          <span><Checkbox disabled checked={bankAccount.active} /></span>
+          <span>
+            <Checkbox disabled checked={bankAccount.active} />
+          </span>
         </TableCell>
       </TableRow>
       <TableRow>
@@ -112,7 +120,14 @@ const BankAccountFieldTable = ({ t, i18n: { language }, bankAccount }) => (
           <span>{t('entities.bankAccount.attachment')}</span>
         </TableCell>
         <TableCell>
-          <span><a download="filename" href={ `data:${bankAccount.attachmentContentType};base64, ${bankAccount.attachment}`} >{t('common.download')}</a></span>
+          <span>
+            <a
+              download="filename"
+              href={`data:${bankAccount.attachmentContentType};base64, ${bankAccount.attachment}`}
+            >
+              {t('common.download')}
+            </a>
+          </span>
         </TableCell>
       </TableRow>
       <TableRow>

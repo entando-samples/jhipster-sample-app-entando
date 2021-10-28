@@ -24,7 +24,7 @@ class BankAccountAddFormContainer extends PureComponent {
 
   closeNotification() {
     this.setState({
-      notificationMessage: null
+      notificationMessage: null,
     });
   }
 

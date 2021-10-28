@@ -75,7 +75,7 @@ class BankAccountTableContainer extends Component {
   }
 
   dispatch(action, afterSetState = () => {}) {
-    this.setState(prevState => reducer(prevState, action), afterSetState);
+    this.setState((prevState) => reducer(prevState, action), afterSetState);
   }
 
   async fetchData() {
@@ -103,7 +103,8 @@ class BankAccountTableContainer extends Component {
         this.dispatch({
           type: READ_ALL,
           payload: {
-            items: paginationMode === 'infinite-scroll' ? [...items, ...bankAccounts] : bankAccounts,
+            items:
+              paginationMode === 'infinite-scroll' ? [...items, ...bankAccounts] : bankAccounts,
             count: bankAccountCount,
           },
         });
@@ -143,8 +144,8 @@ class BankAccountTableContainer extends Component {
     this.dispatch({
       type: ERROR_FETCH,
       payload: {
-        notificationMessage: t('error.dataLoading'),
-        notificationStatus: Notification.ERROR,
+        message: t('error.dataLoading'),
+        status: Notification.ERROR,
       },
     });
   }
@@ -187,7 +188,7 @@ class BankAccountTableContainer extends Component {
     const Actions = ({ item }) =>
       onDelete ? (
         <ConfirmationDialogTrigger
-          onCloseDialog={action => this.handleConfirmationDialogAction(action, item)}
+          onCloseDialog={(action) => this.handleConfirmationDialogAction(action, item)}
           dialog={{
             title: t('entities.bankAccount.deleteDialog.title'),
             description: t('entities.bankAccount.deleteDialog.description'),

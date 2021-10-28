@@ -10,7 +10,7 @@ jest.mock('api/bankAccounts');
 jest.mock('@material-ui/pickers', () => {
   // eslint-disable-next-line react/prop-types
   const MockPicker = ({ id, value, name, label, onChange }) => {
-    const handleChange = event => onChange(event.currentTarget.value);
+    const handleChange = (event) => onChange(event.currentTarget.value);
     return (
       <span>
         <label htmlFor={id}>{label}</label>
@@ -31,17 +31,17 @@ const dataURLtoFile = (dataurl, filename) => {
   let n = bstr.length;
   const u8arr = new Uint8Array(n);
 
-  while(n){
+  while (n) {
     n -= 1;
     u8arr[n] = bstr.charCodeAt(n);
   }
 
-  return new File([u8arr], filename, {type:mime});
+  return new File([u8arr], filename, { type: mime });
 };
 
 jest.mock('auth/withKeycloak', () => {
-  const withKeycloak = Component => {
-    return props => (
+  const withKeycloak = (Component) => {
+    return (props) => (
       <Component
         {...props} // eslint-disable-line react/jsx-props-no-spreading
         keycloak={{
@@ -67,7 +67,7 @@ describe('BankAccountAddFormContainer', () => {
   const onCreateMock = jest.fn();
 
   it('saves data', async () => {
-    apiBankAccountPost.mockImplementation(data => Promise.resolve(data));
+    apiBankAccountPost.mockImplementation((data) => Promise.resolve(data));
 
     const { findByTestId, findByLabelText, queryByText, rerender } = render(
       <BankAccountAddFormContainer onError={onErrorMock} onUpdate={onCreateMock} />
@@ -79,16 +79,26 @@ describe('BankAccountAddFormContainer', () => {
     fireEvent.change(bankNumberField, { target: { value: bankAccountMock.bankNumber } });
     const agencyNumberField = await findByLabelText('entities.bankAccount.agencyNumber');
     fireEvent.change(agencyNumberField, { target: { value: bankAccountMock.agencyNumber } });
-    const lastOperationDurationField = await findByLabelText('entities.bankAccount.lastOperationDuration');
-    fireEvent.change(lastOperationDurationField, { target: { value: bankAccountMock.lastOperationDuration } });
-    const meanOperationDurationField = await findByLabelText('entities.bankAccount.meanOperationDuration');
-    fireEvent.change(meanOperationDurationField, { target: { value: bankAccountMock.meanOperationDuration } });
+    const lastOperationDurationField = await findByLabelText(
+      'entities.bankAccount.lastOperationDuration'
+    );
+    fireEvent.change(lastOperationDurationField, {
+      target: { value: bankAccountMock.lastOperationDuration },
+    });
+    const meanOperationDurationField = await findByLabelText(
+      'entities.bankAccount.meanOperationDuration'
+    );
+    fireEvent.change(meanOperationDurationField, {
+      target: { value: bankAccountMock.meanOperationDuration },
+    });
     const balanceField = await findByLabelText('entities.bankAccount.balance');
     fireEvent.change(balanceField, { target: { value: bankAccountMock.balance } });
     const openingDayField = await findByLabelText('entities.bankAccount.openingDay');
     fireEvent.change(openingDayField, { target: { value: bankAccountMock.openingDay } });
     const lastOperationDateField = await findByLabelText('entities.bankAccount.lastOperationDate');
-    fireEvent.change(lastOperationDateField, { target: { value: bankAccountMock.lastOperationDate } });
+    fireEvent.change(lastOperationDateField, {
+      target: { value: bankAccountMock.lastOperationDate },
+    });
     if (bankAccountMock.active) {
       const activeField = await findByTestId('bankAccount-active-checkbox');
       fireEvent.click(activeField);
@@ -96,7 +106,10 @@ describe('BankAccountAddFormContainer', () => {
     const accountTypeField = await findByLabelText('entities.bankAccount.accountType');
     fireEvent.change(accountTypeField, { target: { value: bankAccountMock.accountType } });
     const attachmentField = await findByTestId('attachment-uploader');
-    const attachmentFile = dataURLtoFile(`data:application/pdf;base64,${bankAccountMock.attachment}`, 'attachment.pdf');
+    const attachmentFile = dataURLtoFile(
+      `data:application/pdf;base64,${bankAccountMock.attachment}`,
+      'attachment.pdf'
+    );
     fireEvent.change(attachmentField, { target: { files: [attachmentFile] } });
     const descriptionField = await findByLabelText('entities.bankAccount.description');
     fireEvent.change(descriptionField, { target: { value: bankAccountMock.description } });
@@ -130,16 +143,26 @@ describe('BankAccountAddFormContainer', () => {
     fireEvent.change(bankNumberField, { target: { value: bankAccountMock.bankNumber } });
     const agencyNumberField = await findByLabelText('entities.bankAccount.agencyNumber');
     fireEvent.change(agencyNumberField, { target: { value: bankAccountMock.agencyNumber } });
-    const lastOperationDurationField = await findByLabelText('entities.bankAccount.lastOperationDuration');
-    fireEvent.change(lastOperationDurationField, { target: { value: bankAccountMock.lastOperationDuration } });
-    const meanOperationDurationField = await findByLabelText('entities.bankAccount.meanOperationDuration');
-    fireEvent.change(meanOperationDurationField, { target: { value: bankAccountMock.meanOperationDuration } });
+    const lastOperationDurationField = await findByLabelText(
+      'entities.bankAccount.lastOperationDuration'
+    );
+    fireEvent.change(lastOperationDurationField, {
+      target: { value: bankAccountMock.lastOperationDuration },
+    });
+    const meanOperationDurationField = await findByLabelText(
+      'entities.bankAccount.meanOperationDuration'
+    );
+    fireEvent.change(meanOperationDurationField, {
+      target: { value: bankAccountMock.meanOperationDuration },
+    });
     const balanceField = await findByLabelText('entities.bankAccount.balance');
     fireEvent.change(balanceField, { target: { value: bankAccountMock.balance } });
     const openingDayField = await findByLabelText('entities.bankAccount.openingDay');
     fireEvent.change(openingDayField, { target: { value: bankAccountMock.openingDay } });
     const lastOperationDateField = await findByLabelText('entities.bankAccount.lastOperationDate');
-    fireEvent.change(lastOperationDateField, { target: { value: bankAccountMock.lastOperationDate } });
+    fireEvent.change(lastOperationDateField, {
+      target: { value: bankAccountMock.lastOperationDate },
+    });
     if (bankAccountMock.active) {
       const activeField = await findByTestId('bankAccount-active-checkbox');
       fireEvent.click(activeField);
@@ -147,7 +170,10 @@ describe('BankAccountAddFormContainer', () => {
     const accountTypeField = await findByLabelText('entities.bankAccount.accountType');
     fireEvent.change(accountTypeField, { target: { value: bankAccountMock.accountType } });
     const attachmentField = await findByTestId('attachment-uploader');
-    const attachmentFile = dataURLtoFile(`data:application/pdf;base64,${bankAccountMock.attachment}`, 'attachment.txt');
+    const attachmentFile = dataURLtoFile(
+      `data:application/pdf;base64,${bankAccountMock.attachment}`,
+      'attachment.txt'
+    );
     fireEvent.change(attachmentField, { target: { files: [attachmentFile] } });
     const descriptionField = await findByLabelText('entities.bankAccount.description');
     fireEvent.change(descriptionField, { target: { value: bankAccountMock.description } });

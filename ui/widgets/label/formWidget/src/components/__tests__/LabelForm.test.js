@@ -17,9 +17,7 @@ describe('Label Form', () => {
       </ThemeProvider>
     );
 
-    expect(getByLabelText('entities.label.labelName').value).toBe(
-        labelMock.labelName
-    );
+    expect(getByLabelText('entities.label.labelName').value).toBe(labelMock.labelName);
   });
 
   it('submits form', async () => {

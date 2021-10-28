@@ -28,4 +28,3 @@ export const request = async (url, options) => {
     ? response.json()
     : Promise.reject(new Error(response.statusText || response.status));
 };
-

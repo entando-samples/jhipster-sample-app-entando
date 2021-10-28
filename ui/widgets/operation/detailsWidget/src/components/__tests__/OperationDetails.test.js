@@ -9,7 +9,7 @@ import operationMock from 'components/__mocks__/operationMocks';
 describe('OperationDetails component', () => {
   test('renders data in details widget', () => {
     const { getByText } = render(<OperationDetails operation={operationMock} />);
-    
-      expect(getByText('entities.operation.date')).toBeInTheDocument();
+
+    expect(getByText('entities.operation.date')).toBeInTheDocument();
   });
 });

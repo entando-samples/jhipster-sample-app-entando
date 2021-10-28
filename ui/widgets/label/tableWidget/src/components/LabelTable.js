@@ -26,9 +26,11 @@ const styles = {
 };
 
 const LabelTable = ({ items, onSelect, classes, t, Actions }) => {
-  const tableRows = items.map(item => (
+  const tableRows = items.map((item) => (
     <TableRow hover className={classes.rowRoot} key={item.id} onClick={() => onSelect(item)}>
-      <TableCell><span>{item.labelName}</span></TableCell>
+      <TableCell>
+        <span>{item.labelName}</span>
+      </TableCell>
       {Actions && (
         <TableCell>
           <Actions item={item} />
@@ -37,7 +39,7 @@ const LabelTable = ({ items, onSelect, classes, t, Actions }) => {
     </TableRow>
   ));
 
-  return (items.length ? (
+  return items.length ? (
     <Table className={classes.tableRoot} stickyHeader>
       <TableHead>
         <TableRow>
@@ -51,7 +53,7 @@ const LabelTable = ({ items, onSelect, classes, t, Actions }) => {
     </Table>
   ) : (
     <div className={classes.noItems}>{t('entities.label.noItems')}</div>
-  ));
+  );
 };
 
 LabelTable.propTypes = {

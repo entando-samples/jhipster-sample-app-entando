@@ -17,38 +17,34 @@ describe('BankAccount Form', () => {
       </ThemeProvider>
     );
 
-    expect(getByLabelText('entities.bankAccount.name').value).toBe(
-        bankAccountMock.name
-    );
+    expect(getByLabelText('entities.bankAccount.name').value).toBe(bankAccountMock.name);
     expect(getByLabelText('entities.bankAccount.bankNumber').value).toBe(
-        bankAccountMock.bankNumber.toString()
+      bankAccountMock.bankNumber.toString()
     );
     expect(getByLabelText('entities.bankAccount.agencyNumber').value).toBe(
-        bankAccountMock.agencyNumber.toString()
+      bankAccountMock.agencyNumber.toString()
     );
     expect(getByLabelText('entities.bankAccount.lastOperationDuration').value).toBe(
-        bankAccountMock.lastOperationDuration.toString()
+      bankAccountMock.lastOperationDuration.toString()
     );
     expect(getByLabelText('entities.bankAccount.meanOperationDuration').value).toBe(
-        bankAccountMock.meanOperationDuration.toString()
+      bankAccountMock.meanOperationDuration.toString()
     );
     expect(getByLabelText('entities.bankAccount.balance').value).toBe(
-        bankAccountMock.balance.toString()
+      bankAccountMock.balance.toString()
     );
     expect(getByLabelText('entities.bankAccount.openingDay').value).toBe(
-        new Date(bankAccountMock.openingDay).toLocaleDateString(i18n.language)
+      new Date(bankAccountMock.openingDay).toLocaleDateString(i18n.language)
     );
     expect(getByLabelText('entities.bankAccount.lastOperationDate').value).toBe(
-        new Date(bankAccountMock.lastOperationDate).toLocaleString(i18n.language)
+      new Date(bankAccountMock.lastOperationDate).toLocaleString(i18n.language)
     );
-    expect(getByLabelText('entities.bankAccount.active').value).toBe(
-        'bankAccount-active'
-    );
+    expect(getByLabelText('entities.bankAccount.active').value).toBe('bankAccount-active');
     expect(getByLabelText('entities.bankAccount.accountType').value).toBe(
-        bankAccountMock.accountType
+      bankAccountMock.accountType
     );
     expect(getByLabelText('entities.bankAccount.description').value).toBe(
-        bankAccountMock.description
+      bankAccountMock.description
     );
   });
 

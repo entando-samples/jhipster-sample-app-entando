@@ -14,7 +14,7 @@
 /**
  * @type {Cypress.PluginConfig}
  */
-module.exports = on => {
+module.exports = (on) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
   on('before:browser:launch', (browser, launchOptions) => {

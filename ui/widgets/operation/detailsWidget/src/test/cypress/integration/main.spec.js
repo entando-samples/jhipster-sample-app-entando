@@ -1,19 +1,19 @@
 import { customElementName, detailsTitle, entityIdCell } from '../support';
 
 describe('Main', () => {
-beforeEach(() => {
-  cy.getOauth2Data();
-  cy.get('@oauth2Data').then(oauth2Data => {
-    cy.keycloackLogin(oauth2Data, 'user');
+  beforeEach(() => {
+    cy.getOauth2Data();
+    cy.get('@oauth2Data').then((oauth2Data) => {
+      cy.keycloackLogin(oauth2Data, 'user');
+    });
   });
-});
 
-afterEach(() => {
-  cy.get('@oauth2Data').then(oauth2Data => {
-    cy.keycloackLogout(oauth2Data);
+  afterEach(() => {
+    cy.get('@oauth2Data').then((oauth2Data) => {
+      cy.keycloackLogout(oauth2Data);
+    });
+    cy.clearCache();
   });
-  cy.clearCache();
-});
 
   describe('Details widget', () => {
     it('should load the page', () => {

@@ -10,8 +10,8 @@ import OperationDetailsContainer from 'components/OperationDetailsContainer';
 jest.mock('api/operation');
 
 jest.mock('auth/withKeycloak', () => {
-  const withKeycloak = Component => {
-    return props => (
+  const withKeycloak = (Component) => {
+    return (props) => (
       <Component
         {...props} // eslint-disable-line react/jsx-props-no-spreading
         keycloak={{
@@ -62,7 +62,7 @@ describe('OperationDetailsContainer component', () => {
     await wait(() => {
       expect(apiOperationGet).toHaveBeenCalledTimes(1);
       expect(onErrorMock).toHaveBeenCalledTimes(1);
-      expect(getByText('common.couldNotFetchData')).toBeInTheDocument();
+      expect(getByText('error.dataLoading')).toBeInTheDocument();
     });
   });
 });

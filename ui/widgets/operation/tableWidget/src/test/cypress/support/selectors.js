@@ -1,5 +1,3 @@
 const customElementName = 'operation-table';
 
-export {
-customElementName
-}
+export { customElementName };

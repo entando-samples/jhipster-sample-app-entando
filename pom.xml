@@ -52,12 +52,13 @@
 
         <!-- Dependency versions -->
         <jhipster-dependencies.version>3.9.1</jhipster-dependencies.version>
+        <entando-bundle-bom.version>6.3.2</entando-bundle-bom.version>
         <!-- The spring-boot version should match the one managed by
         https://mvnrepository.com/artifact/io.github.jhipster/jhipster-dependencies/${jhipster-dependencies.version} -->
         <spring-boot.version>2.2.7.RELEASE</spring-boot.version>
         <!-- The hibernate version should match the one managed by
         https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies/${spring-boot.version} -->
-        <hibernate.version>5.4.15.Final</hibernate.version>
+        <hibernate.version>5.4.24.Final</hibernate.version>
         <!-- The javassist version should match the one managed by
         https://mvnrepository.com/artifact/org.hibernate/hibernate-core/${hibernate.version} -->
         <javassist.version>3.24.0-GA</javassist.version>
@@ -72,9 +73,6 @@
         <mapstruct.version>1.3.1.Final</mapstruct.version>
         <caffeine.version>2.8.4</caffeine.version>
         <typesafe.version>1.4.0</typesafe.version>
-        
-        <springfox.version>2.9.2</springfox.version>
-        
         <!-- Plugin versions -->
         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
@@ -107,9 +105,9 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>io.github.jhipster</groupId>
-                <artifactId>jhipster-dependencies</artifactId>
-                <version>${jhipster-dependencies.version}</version>
+                <groupId>org.entando</groupId>
+                <artifactId>entando-bundle-bom</artifactId>
+                <version>${entando-bundle-bom.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -160,7 +158,6 @@
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
-            <version>${springfox.version}</version>
         </dependency>
         
         <dependency>
@@ -640,11 +637,13 @@
                     <configuration>
                       <allowInsecureRegistries>true</allowInsecureRegistries>
                         <from>
-                            <!-- Think of using the DOCKER_JAVA_JRE JHipster env variable -->
-                            <image>entando/entando-alpine-base:6.0.0</image>
+                            <image>adoptopenjdk:11-jre-hotspot</image>
                         </from>
                         <to>
                             <image>entando/${project.artifactId}:${project.version}</image>
+                            <tags>
+                                <tag>latest</tag>
+                            </tags>
                         </to>
                         <container>
                             <entrypoint>

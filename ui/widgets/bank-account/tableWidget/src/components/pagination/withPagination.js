@@ -5,7 +5,7 @@ import { PaginationContext } from 'components/pagination/PaginationContext';
 
 export default function withPagination(WrappedComponent) {
   class WithPaginationComponent extends Component {
-    renderWrappedComponent = context => {
+    renderWrappedComponent = (context) => {
       const { forwardedRef, ...rest } = this.props;
       return <WrappedComponent {...rest} ref={forwardedRef} pagination={context} />;
     };

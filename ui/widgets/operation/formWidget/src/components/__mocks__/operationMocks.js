@@ -1,7 +1,8 @@
 const operationMock = {
-  date: '1983-05-20T00:44:12+02:00',
-  description: 'Nihil quam accusantium voluptatum nihil nihil. Rerum consequatur nulla repudiandae est quod at ut. Provident expedita occaecati et quia neque. Magnam sint provident. Inventore tenetur quia delectus accusamus cupiditate est minima voluptatem. Rerum ipsa non nobis nam fuga aut porro veritatis.',
-  amount: -159,
+  date: '2010-08-03T13:11:16+02:00',
+  description:
+    'Sit autem atque fugit iure ipsa. Natus deserunt voluptas accusamus. Aliquid dolorem ea commodi saepe deserunt quia consequatur. Quasi asperiores at voluptatem possimus voluptate sed tempore dolor. Magni enim nobis tenetur. Sed tempore quia iusto consequatur fugit aut vero corrupti.',
+  amount: -802,
 };
 
 export default operationMock;
