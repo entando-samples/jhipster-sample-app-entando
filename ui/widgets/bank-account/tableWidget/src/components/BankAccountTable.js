@@ -27,28 +27,51 @@ const styles = {
 };
 
 const BankAccountTable = ({ items, onSelect, classes, t, i18n, Actions }) => {
-  const tableRows = items.map(item => (
+  const tableRows = items.map((item) => (
     <TableRow hover className={classes.rowRoot} key={item.id} onClick={() => onSelect(item)}>
-      <TableCell><span>{item.name}</span></TableCell>
-      <TableCell><span>{item.bankNumber}</span></TableCell>
-      <TableCell><span>{item.agencyNumber}</span></TableCell>
-      <TableCell><span>{item.lastOperationDuration}</span></TableCell>
-      <TableCell><span>{item.meanOperationDuration}</span></TableCell>
-      <TableCell><span>{item.balance}</span></TableCell>
-      <TableCell><span>{new Date(item.openingDay).toLocaleDateString(i18n.language)}</span></TableCell>
-      <TableCell><span>{new Date(item.lastOperationDate).toLocaleString(i18n.language)}</span></TableCell>
+      <TableCell>
+        <span>{item.name}</span>
+      </TableCell>
+      <TableCell>
+        <span>{item.bankNumber}</span>
+      </TableCell>
+      <TableCell>
+        <span>{item.agencyNumber}</span>
+      </TableCell>
+      <TableCell>
+        <span>{item.lastOperationDuration}</span>
+      </TableCell>
+      <TableCell>
+        <span>{item.meanOperationDuration}</span>
+      </TableCell>
+      <TableCell>
+        <span>{item.balance}</span>
+      </TableCell>
+      <TableCell>
+        <span>{new Date(item.openingDay).toLocaleDateString(i18n.language)}</span>
+      </TableCell>
+      <TableCell>
+        <span>{new Date(item.lastOperationDate).toLocaleString(i18n.language)}</span>
+      </TableCell>
       <TableCell align="center">
         <Checkbox disabled checked={item.active} />
       </TableCell>
-      <TableCell><span>{item.accountType}</span></TableCell>
+      <TableCell>
+        <span>{item.accountType}</span>
+      </TableCell>
       <TableCell>
         <span>
-          <a download="bankAccount" href={`data:${item.attachmentContentType};base64, ${item.attachment}`}>
+          <a
+            download="bankAccount"
+            href={`data:${item.attachmentContentType};base64, ${item.attachment}`}
+          >
             {t('common.download')}
           </a>
         </span>
       </TableCell>
-      <TableCell><span>{item.description}</span></TableCell>
+      <TableCell>
+        <span>{item.description}</span>
+      </TableCell>
       {Actions && (
         <TableCell>
           <Actions item={item} />
@@ -57,7 +80,7 @@ const BankAccountTable = ({ items, onSelect, classes, t, i18n, Actions }) => {
     </TableRow>
   ));
 
-  return (items.length ? (
+  return items.length ? (
     <Table className={classes.tableRoot} stickyHeader>
       <TableHead>
         <TableRow>
@@ -104,7 +127,7 @@ const BankAccountTable = ({ items, onSelect, classes, t, i18n, Actions }) => {
     </Table>
   ) : (
     <div className={classes.noItems}>{t('entities.bankAccount.noItems')}</div>
-  ));
+  );
 };
 
 BankAccountTable.propTypes = {

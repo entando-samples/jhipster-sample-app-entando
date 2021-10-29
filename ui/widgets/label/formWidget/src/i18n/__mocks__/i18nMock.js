@@ -8,6 +8,6 @@ i18n.use(initReactI18next).init({
   react: { useSuspense: false },
 });
 
-i18n.t = jest.fn(key => key);
+i18n.t = jest.fn((key) => key);
 
 export default i18n;

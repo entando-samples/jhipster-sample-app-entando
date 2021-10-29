@@ -9,8 +9,8 @@ import labelMock from 'components/__mocks__/labelMocks';
 jest.mock('api/labels');
 
 jest.mock('auth/withKeycloak', () => {
-  const withKeycloak = Component => {
-    return props => (
+  const withKeycloak = (Component) => {
+    return (props) => (
       <Component
         {...props} // eslint-disable-line react/jsx-props-no-spreading
         keycloak={{

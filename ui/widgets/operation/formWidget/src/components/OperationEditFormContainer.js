@@ -62,7 +62,7 @@ class OperationEditFormContainer extends PureComponent {
 
   closeNotification() {
     this.setState(() => ({
-      notificationMessage: null
+      notificationMessage: null,
     }));
   }
 
@@ -120,9 +120,9 @@ class OperationEditFormContainer extends PureComponent {
 
     let form;
     if (typeof operation === 'undefined') {
-     form = t('entities.operation.notFound');
+      form = t('entities.operation.notFound');
     } else if (operation === null) {
-      form = t('entities.operation.deleted');;
+      form = t('entities.operation.deleted');
     } else {
       form = (
         <OperationForm
@@ -138,9 +138,7 @@ class OperationEditFormContainer extends PureComponent {
         <UnauthenticatedView keycloak={keycloak}>
           {t('common.notAuthenticated')}
         </UnauthenticatedView>
-        <AuthenticatedView keycloak={keycloak}>
-         {form}
-        </AuthenticatedView>
+        <AuthenticatedView keycloak={keycloak}>{form}</AuthenticatedView>
         <Notification
           status={notificationStatus}
           message={notificationMessage}

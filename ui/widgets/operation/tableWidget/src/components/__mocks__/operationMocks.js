@@ -1,15 +1,17 @@
 const operationMocks = [
   {
     id: 0,
-    date: '1983-05-20T00:44:12+02:00',
-    description: 'Nihil quam accusantium voluptatum nihil nihil. Rerum consequatur nulla repudiandae est quod at ut. Provident expedita occaecati et quia neque. Magnam sint provident. Inventore tenetur quia delectus accusamus cupiditate est minima voluptatem. Rerum ipsa non nobis nam fuga aut porro veritatis.',
-    amount: -159,
+    date: '2010-08-03T13:11:16+02:00',
+    description:
+      'Sit autem atque fugit iure ipsa. Natus deserunt voluptas accusamus. Aliquid dolorem ea commodi saepe deserunt quia consequatur. Quasi asperiores at voluptatem possimus voluptate sed tempore dolor. Magni enim nobis tenetur. Sed tempore quia iusto consequatur fugit aut vero corrupti.',
+    amount: -802,
   },
   {
     id: 1,
-    date: '2014-01-07T17:06:42+01:00',
-    description: 'Sapiente nemo aspernatur architecto nihil. Sit hic et ab. Harum quaerat officia quasi. Odit omnis soluta.',
-    amount: -670,
+    date: '1980-05-07T23:03:43+02:00',
+    description:
+      'Odit consectetur repellendus. Omnis est inventore voluptatibus libero earum et quia aut. Enim in et consequuntur. Voluptates optio est dicta consequuntur iste. Eligendi autem tenetur odit omnis earum est mollitia consequatur sunt. Dolores velit beatae et.',
+    amount: -578,
   },
 ];
 

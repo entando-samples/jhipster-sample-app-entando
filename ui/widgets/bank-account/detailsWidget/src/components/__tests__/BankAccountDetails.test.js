@@ -9,7 +9,7 @@ import bankAccountMock from 'components/__mocks__/bankAccountMocks';
 describe('BankAccountDetails component', () => {
   test('renders data in details widget', () => {
     const { getByText } = render(<BankAccountDetails bankAccount={bankAccountMock} />);
-    
-      expect(getByText('entities.bankAccount.name')).toBeInTheDocument();
+
+    expect(getByText('entities.bankAccount.name')).toBeInTheDocument();
   });
 });

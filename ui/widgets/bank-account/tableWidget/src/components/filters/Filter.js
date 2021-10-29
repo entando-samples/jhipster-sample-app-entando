@@ -26,7 +26,7 @@ const styles = () => ({
 const Filter = ({ filter, t, update, remove, filterId, classes }) => {
   const filterOperators = getFieldFilterTypes(filter.field);
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     update(filterId, { [event.target.name]: event.target.value });
   };
 
@@ -51,8 +51,12 @@ const Filter = ({ filter, t, update, remove, filterId, classes }) => {
             <option value="name">{t('entities.bankAccount.name')}</option>
             <option value="bankNumber">{t('entities.bankAccount.bankNumber')}</option>
             <option value="agencyNumber">{t('entities.bankAccount.agencyNumber')}</option>
-            <option value="lastOperationDuration">{t('entities.bankAccount.lastOperationDuration')}</option>
-            <option value="meanOperationDuration">{t('entities.bankAccount.meanOperationDuration')}</option>
+            <option value="lastOperationDuration">
+              {t('entities.bankAccount.lastOperationDuration')}
+            </option>
+            <option value="meanOperationDuration">
+              {t('entities.bankAccount.meanOperationDuration')}
+            </option>
             <option value="balance">{t('entities.bankAccount.balance')}</option>
             <option value="openingDay">{t('entities.bankAccount.openingDay')}</option>
             <option value="lastOperationDate">{t('entities.bankAccount.lastOperationDate')}</option>
@@ -76,7 +80,7 @@ const Filter = ({ filter, t, update, remove, filterId, classes }) => {
               onChange={handleChange}
             >
               <option value="" />
-              {filterOperators.map(operator => {
+              {filterOperators.map((operator) => {
                 if (typeof operator !== 'string') {
                   return (
                     <option key={operator.value} value={operator.value}>

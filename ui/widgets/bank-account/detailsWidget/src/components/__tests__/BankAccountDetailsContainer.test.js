@@ -10,8 +10,8 @@ import BankAccountDetailsContainer from 'components/BankAccountDetailsContainer'
 jest.mock('api/bankAccount');
 
 jest.mock('auth/withKeycloak', () => {
-  const withKeycloak = Component => {
-    return props => (
+  const withKeycloak = (Component) => {
+    return (props) => (
       <Component
         {...props} // eslint-disable-line react/jsx-props-no-spreading
         keycloak={{
@@ -71,7 +71,7 @@ describe('BankAccountDetailsContainer component', () => {
     await wait(() => {
       expect(apiBankAccountGet).toHaveBeenCalledTimes(1);
       expect(onErrorMock).toHaveBeenCalledTimes(1);
-      expect(getByText('common.couldNotFetchData')).toBeInTheDocument();
+      expect(getByText('error.dataLoading')).toBeInTheDocument();
     });
   });
 });

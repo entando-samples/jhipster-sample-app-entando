@@ -62,7 +62,7 @@ class LabelEditFormContainer extends PureComponent {
 
   closeNotification() {
     this.setState(() => ({
-      notificationMessage: null
+      notificationMessage: null,
     }));
   }
 
@@ -120,9 +120,9 @@ class LabelEditFormContainer extends PureComponent {
 
     let form;
     if (typeof label === 'undefined') {
-     form = t('entities.label.notFound');
+      form = t('entities.label.notFound');
     } else if (label === null) {
-      form = t('entities.label.deleted');;
+      form = t('entities.label.deleted');
     } else {
       form = (
         <LabelForm
@@ -138,9 +138,7 @@ class LabelEditFormContainer extends PureComponent {
         <UnauthenticatedView keycloak={keycloak}>
           {t('common.notAuthenticated')}
         </UnauthenticatedView>
-        <AuthenticatedView keycloak={keycloak}>
-         {form}
-        </AuthenticatedView>
+        <AuthenticatedView keycloak={keycloak}>{form}</AuthenticatedView>
         <Notification
           status={notificationStatus}
           message={notificationMessage}

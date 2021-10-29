@@ -130,7 +130,7 @@ class OperationFormElement extends HTMLElement {
   }
 
   defaultWidgetEventHandler() {
-    return evt => {
+    return (evt) => {
       const {
         tableAdd,
         cancelEditing,

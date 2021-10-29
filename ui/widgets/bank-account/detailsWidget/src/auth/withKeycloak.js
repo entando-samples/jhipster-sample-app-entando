@@ -5,7 +5,7 @@ import KeycloakContext from 'auth/KeycloakContext';
 
 export default function withKeycloak(WrappedComponent) {
   class WithKeycloakComponent extends Component {
-    renderWrappedComponent = value => {
+    renderWrappedComponent = (value) => {
       const { forwardedRef, ...rest } = this.props;
       return <WrappedComponent {...rest} ref={forwardedRef} keycloak={value} />;
     };

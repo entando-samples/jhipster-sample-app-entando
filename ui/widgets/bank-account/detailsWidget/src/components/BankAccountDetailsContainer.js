@@ -56,7 +56,7 @@ class BankAccountDetailsContainer extends React.Component {
         const bankAccount = await apiBankAccountGet(serviceUrl, id);
         this.setState(() => ({
           bankAccount,
-          loading: false
+          loading: false,
         }));
       } catch (err) {
         this.handleError(err);
@@ -64,20 +64,19 @@ class BankAccountDetailsContainer extends React.Component {
     }
   }
 
-
   handleError(err) {
     const { t, onError } = this.props;
     onError(err);
     this.setState(() => ({
-      notificationMessage: t('common.couldNotFetchData'),
+      notificationMessage: t('error.dataLoading'),
       notificationStatus: Notification.ERROR,
-      loading: false
+      loading: false,
     }));
   }
 
   closeNotification() {
     this.setState({
-      notificationMessage: null
+      notificationMessage: null,
     });
   }
 

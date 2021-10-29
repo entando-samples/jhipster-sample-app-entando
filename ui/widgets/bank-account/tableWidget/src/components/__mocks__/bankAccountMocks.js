@@ -1,33 +1,39 @@
 const bankAccountMocks = [
   {
     id: 0,
-    name: 'Aut dicta delectus. Molestiae suscipit esse nihil quasi quisquam ut sed ullam. Fugit adipisci adipisci et quam. Excepturi quis similique vel.',
-    bankNumber: -799,
-    agencyNumber: 375,
-    lastOperationDuration: 0.36524241976439953,
-    meanOperationDuration: 289.50997116044164,
-    balance: 356,
-    openingDay: '2010-05-14',
-    lastOperationDate: '1974-07-31T20:38:36+01:00',
-    active: true,
-    accountType: 'CHECKING',
-    attachment: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=',
-    description: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=',
+    name:
+      'Minus dolorum quidem vero et aut eius et aut nisi. Cumque et eum et debitis rerum nesciunt. Quibusdam dolore ducimus. Consequatur eligendi quis quod non dolores. Delectus autem qui dolores voluptatem illo numquam voluptas omnis hic.',
+    bankNumber: 455,
+    agencyNumber: 327,
+    lastOperationDuration: 0.35256899264641106,
+    meanOperationDuration: 212.35997788608074,
+    balance: 576,
+    openingDay: '2008-04-25',
+    lastOperationDate: '2009-02-06T02:57:58+01:00',
+    active: false,
+    accountType: 'SAVINGS',
+    attachment:
+      'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=',
+    description:
+      'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=',
   },
   {
     id: 1,
-    name: 'Similique in ut aut animi possimus. Atque aliquid mollitia aut ut recusandae perspiciatis aperiam earum. Quisquam ut ut aperiam numquam. Modi autem cumque incidunt ullam. Delectus et iste mollitia.',
-    bankNumber: 427,
-    agencyNumber: 782,
-    lastOperationDuration: 0.9143292084336281,
-    meanOperationDuration: -714.7234356962144,
-    balance: -406,
-    openingDay: '1974-10-11',
-    lastOperationDate: '2001-04-23T05:14:05+02:00',
+    name:
+      'Et aliquid quam non dicta deleniti aspernatur at pariatur atque. Ex et est nesciunt non rerum fugiat enim. Et error dolor veniam.',
+    bankNumber: 34,
+    agencyNumber: -349,
+    lastOperationDuration: 0.6755251381546259,
+    meanOperationDuration: 454.7379859723151,
+    balance: -704,
+    openingDay: '1992-03-24',
+    lastOperationDate: '1988-04-05T09:12:48+02:00',
     active: false,
-    accountType: 'CHECKING',
-    attachment: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=',
-    description: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=',
+    accountType: 'LOAN',
+    attachment:
+      'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=',
+    description:
+      'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=',
   },
 ];
 

@@ -9,8 +9,8 @@ import operationMock from 'components/__mocks__/operationMocks';
 jest.mock('api/operations');
 
 jest.mock('auth/withKeycloak', () => {
-  const withKeycloak = Component => {
-    return props => (
+  const withKeycloak = (Component) => {
+    return (props) => (
       <Component
         {...props} // eslint-disable-line react/jsx-props-no-spreading
         keycloak={{

@@ -24,7 +24,7 @@ class LabelAddFormContainer extends PureComponent {
 
   closeNotification() {
     this.setState({
-      notificationMessage: null
+      notificationMessage: null,
     });
   }
 

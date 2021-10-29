@@ -26,11 +26,17 @@ const styles = {
 };
 
 const OperationTable = ({ items, onSelect, classes, t, i18n, Actions }) => {
-  const tableRows = items.map(item => (
+  const tableRows = items.map((item) => (
     <TableRow hover className={classes.rowRoot} key={item.id} onClick={() => onSelect(item)}>
-      <TableCell><span>{new Date(item.date).toLocaleString(i18n.language)}</span></TableCell>
-      <TableCell><span>{item.description}</span></TableCell>
-      <TableCell><span>{item.amount}</span></TableCell>
+      <TableCell>
+        <span>{new Date(item.date).toLocaleString(i18n.language)}</span>
+      </TableCell>
+      <TableCell>
+        <span>{item.description}</span>
+      </TableCell>
+      <TableCell>
+        <span>{item.amount}</span>
+      </TableCell>
       {Actions && (
         <TableCell>
           <Actions item={item} />
@@ -39,7 +45,7 @@ const OperationTable = ({ items, onSelect, classes, t, i18n, Actions }) => {
     </TableRow>
   ));
 
-  return (items.length ? (
+  return items.length ? (
     <Table className={classes.tableRoot} stickyHeader>
       <TableHead>
         <TableRow>
@@ -59,7 +65,7 @@ const OperationTable = ({ items, onSelect, classes, t, i18n, Actions }) => {
     </Table>
   ) : (
     <div className={classes.noItems}>{t('entities.operation.noItems')}</div>
-  ));
+  );
 };
 
 OperationTable.propTypes = {

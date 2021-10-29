@@ -10,7 +10,7 @@ import InfoIcon from '@material-ui/icons/Info';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import CloseIcon from '@material-ui/icons/Close';
 
-const styles = theme => ({
+const styles = (theme) => ({
   message: {
     display: 'flex',
     alignItems: 'center',

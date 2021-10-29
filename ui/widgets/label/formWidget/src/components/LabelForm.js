@@ -11,7 +11,7 @@ import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import ConfirmationDialogTrigger from 'components/common/ConfirmationDialogTrigger';
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     margin: theme.spacing(3),
   },
@@ -52,57 +52,55 @@ class LabelForm extends PureComponent {
       t,
     } = this.props;
 
+    const getHelperText = (field) => (errors[field] && touched[field] ? errors[field] : '');
 
-    const getHelperText = field => (errors[field] && touched[field] ? errors[field] : '');
-
-
-    const handleSubmit = e => {
+    const handleSubmit = (e) => {
       e.stopPropagation(); // avoids double submission caused by react-shadow-dom-retarget-events
       formikHandleSubmit(e);
     };
 
     return (
-        <form onSubmit={handleSubmit} className={classes.root} data-testid="label-form">
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                id="label-labelName"
-                error={errors.labelName && touched.labelName}
-                helperText={getHelperText('labelName')}
-                className={classes.textField}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.labelName}
-                name="labelName"
-                label={t('entities.label.labelName')}
-              />
-            </Grid>
-            {onDelete && (
-              <ConfirmationDialogTrigger
-                onCloseDialog={this.handleConfirmationDialogAction}
-                dialog={{
-                  title: t('entities.label.deleteDialog.title'),
-                  description: t('entities.label.deleteDialog.description'),
-                  confirmLabel: t('common.yes'),
-                  discardLabel: t('common.no'),
-                }}
-                Renderer={({ onClick }) => (
-                  <Button onClick={onClick} disabled={isSubmitting}>
-                    {t('common.delete')}
-                  </Button>
-                )}
-              />
-            )}
-
-            <Button onClick={onCancelEditing} disabled={isSubmitting} data-testid="cancel-btn">
-              {t('common.cancel')}
-            </Button>
-
-            <Button type="submit" color="primary" disabled={isSubmitting} data-testid="submit-btn">
-              {t('common.save')}
-            </Button>
+      <form onSubmit={handleSubmit} className={classes.root} data-testid="label-form">
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              id="label-labelName"
+              error={errors.labelName && touched.labelName}
+              helperText={getHelperText('labelName')}
+              className={classes.textField}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values.labelName}
+              name="labelName"
+              label={t('entities.label.labelName')}
+            />
           </Grid>
-        </form>
+          {onDelete && (
+            <ConfirmationDialogTrigger
+              onCloseDialog={this.handleConfirmationDialogAction}
+              dialog={{
+                title: t('entities.label.deleteDialog.title'),
+                description: t('entities.label.deleteDialog.description'),
+                confirmLabel: t('common.yes'),
+                discardLabel: t('common.no'),
+              }}
+              Renderer={({ onClick }) => (
+                <Button onClick={onClick} disabled={isSubmitting}>
+                  {t('common.delete')}
+                </Button>
+              )}
+            />
+          )}
+
+          <Button onClick={onCancelEditing} disabled={isSubmitting} data-testid="cancel-btn">
+            {t('common.cancel')}
+          </Button>
+
+          <Button type="submit" color="primary" disabled={isSubmitting} data-testid="submit-btn">
+            {t('common.save')}
+          </Button>
+        </Grid>
+      </form>
     );
   }
 }

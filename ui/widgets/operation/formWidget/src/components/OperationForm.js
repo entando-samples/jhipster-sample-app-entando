@@ -15,7 +15,7 @@ import dateFnsLocales from 'i18n/dateFnsLocales';
 import TextField from '@material-ui/core/TextField';
 import ConfirmationDialogTrigger from 'components/common/ConfirmationDialogTrigger';
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     margin: theme.spacing(3),
   },
@@ -58,15 +58,14 @@ class OperationForm extends PureComponent {
       i18n,
     } = this.props;
 
-    const handleDateChange = field => value => {
+    const handleDateChange = (field) => (value) => {
       setFieldValue(field, value);
     };
 
-    const dateTimeLabelFn = date => (date ? new Date(date).toLocaleString(i18n.language) : '');
-    const getHelperText = field => (errors[field] && touched[field] ? errors[field] : '');
+    const dateTimeLabelFn = (date) => (date ? new Date(date).toLocaleString(i18n.language) : '');
+    const getHelperText = (field) => (errors[field] && touched[field] ? errors[field] : '');
 
-
-    const handleSubmit = e => {
+    const handleSubmit = (e) => {
       e.stopPropagation(); // avoids double submission caused by react-shadow-dom-retarget-events
       formikHandleSubmit(e);
     };

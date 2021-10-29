@@ -46,7 +46,7 @@ class LabelDetailsElement extends HTMLElement {
 
     const serviceUrl = this.getAttribute(ATTRIBUTES.serviceUrl) || '';
 
-    const onError = error => {
+    const onError = (error) => {
       const customEvent = new CustomEvent(`${customEventPrefix}error`, {
         details: {
           error,

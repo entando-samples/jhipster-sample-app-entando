@@ -9,7 +9,7 @@ import labelMock from 'components/__mocks__/labelMocks';
 describe('LabelDetails component', () => {
   test('renders data in details widget', () => {
     const { getByText } = render(<LabelDetails label={labelMock} />);
-    
-      expect(getByText('entities.label.labelName')).toBeInTheDocument();
+
+    expect(getByText('entities.label.labelName')).toBeInTheDocument();
   });
 });

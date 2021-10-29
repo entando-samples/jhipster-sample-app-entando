@@ -75,7 +75,7 @@ class LabelTableContainer extends Component {
   }
 
   dispatch(action, afterSetState = () => {}) {
-    this.setState(prevState => reducer(prevState, action), afterSetState);
+    this.setState((prevState) => reducer(prevState, action), afterSetState);
   }
 
   async fetchData() {
@@ -143,8 +143,8 @@ class LabelTableContainer extends Component {
     this.dispatch({
       type: ERROR_FETCH,
       payload: {
-        notificationMessage: t('error.dataLoading'),
-        notificationStatus: Notification.ERROR,
+        message: t('error.dataLoading'),
+        status: Notification.ERROR,
       },
     });
   }
@@ -187,7 +187,7 @@ class LabelTableContainer extends Component {
     const Actions = ({ item }) =>
       onDelete ? (
         <ConfirmationDialogTrigger
-          onCloseDialog={action => this.handleConfirmationDialogAction(action, item)}
+          onCloseDialog={(action) => this.handleConfirmationDialogAction(action, item)}
           dialog={{
             title: t('entities.label.deleteDialog.title'),
             description: t('entities.label.deleteDialog.description'),

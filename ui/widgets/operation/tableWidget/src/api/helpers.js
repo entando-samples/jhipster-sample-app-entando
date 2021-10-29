@@ -1,19 +1,19 @@
 export const getKeycloakToken = () => {
   if (
-      window &&
-      window.entando &&
-      window.entando.keycloak &&
-      window.entando.keycloak.authenticated
+    window &&
+    window.entando &&
+    window.entando.keycloak &&
+    window.entando.keycloak.authenticated
   ) {
-      return window.entando.keycloak.token;
+    return window.entando.keycloak.token;
   }
   return '';
 };
 
 export const getDefaultOptions = () => ({
   headers: new Headers({
-      Authorization: `Bearer ${getKeycloakToken()}`,
-      'Content-Type': 'application/json',
+    Authorization: `Bearer ${getKeycloakToken()}`,
+    'Content-Type': 'application/json',
   }),
 });
 
@@ -27,16 +27,16 @@ export const request = async (url, options) => {
   const response = await fetch(url, options);
 
   const headers = {
-      ...(response.headers.has('X-Total-Count')
-          ? {'X-Total-Count': parseInt(response.headers.get('X-Total-Count'), 10)}
-          : {}),
+    ...(response.headers.has('X-Total-Count')
+      ? { 'X-Total-Count': parseInt(response.headers.get('X-Total-Count'), 10) }
+      : {}),
   };
 
   if (response.status === 204) {
-    return { operations:'' };
+    return { operations: '' };
   }
 
   return response.status >= 200 && response.status < 300
-      ? {operations: await response.json(), headers}
-      : Promise.reject(new Error(response.statusText || response.status));
+    ? { operations: await response.json(), headers }
+    : Promise.reject(new Error(response.statusText || response.status));
 };

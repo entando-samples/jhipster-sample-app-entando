@@ -18,14 +18,10 @@ describe('Operation Form', () => {
     );
 
     expect(getByLabelText('entities.operation.date').value).toBe(
-        new Date(operationMock.date).toLocaleString(i18n.language)
+      new Date(operationMock.date).toLocaleString(i18n.language)
     );
-    expect(getByLabelText('entities.operation.description').value).toBe(
-        operationMock.description
-    );
-    expect(getByLabelText('entities.operation.amount').value).toBe(
-        operationMock.amount.toString()
-    );
+    expect(getByLabelText('entities.operation.description').value).toBe(operationMock.description);
+    expect(getByLabelText('entities.operation.amount').value).toBe(operationMock.amount.toString());
   });
 
   it('submits form', async () => {

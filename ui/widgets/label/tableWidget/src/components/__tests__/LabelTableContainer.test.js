@@ -10,8 +10,8 @@ import LabelTableContainer from 'components/LabelTableContainer';
 jest.mock('api/labels');
 
 jest.mock('auth/withKeycloak', () => {
-  const withKeycloak = Component => {
-    return props => (
+  const withKeycloak = (Component) => {
+    return (props) => (
       <Component
         {...props} // eslint-disable-line react/jsx-props-no-spreading
         keycloak={{
@@ -26,8 +26,8 @@ jest.mock('auth/withKeycloak', () => {
 });
 
 jest.mock('components/pagination/withPagination', () => {
-  const withPagination = Component => {
-    return props => (
+  const withPagination = (Component) => {
+    return (props) => (
       <Component
         {...props} // eslint-disable-line react/jsx-props-no-spreading
         pagination={{
@@ -49,9 +49,7 @@ describe('LabelTableContainer', () => {
   });
 
   it('calls API', async () => {
-    apiLabelsGet.mockImplementation(() =>
-      Promise.resolve({ labels: labelMocks, count: 2 })
-    );
+    apiLabelsGet.mockImplementation(() => Promise.resolve({ labels: labelMocks, count: 2 }));
     const { queryByText } = render(<LabelTableContainer />);
 
     await wait(() => {
